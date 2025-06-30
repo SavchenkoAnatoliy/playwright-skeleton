@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Date Picker', async ({ page }) => {
+test('Drug And Drop test', async ({ page }) => {
   //Open URL
   await page.goto('http://testautomationpractice.blogspot.com/');
  
