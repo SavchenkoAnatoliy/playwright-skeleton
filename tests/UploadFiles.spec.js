@@ -1,7 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { afterEach } from 'node:test';
 
-test('Keyboard Actions', async ({ page }) => {
+test('Upload File or Files test', async ({ page }) => {
   //Open URL
   await page.goto('https://testautomationpractice.blogspot.com/');
  
@@ -21,12 +20,10 @@ test('Keyboard Actions', async ({ page }) => {
   ]);
 
   //Removing files
-  //await uploadSingleFileBtn.setInputFiles('');
+  await uploadMultipleFilesBtn.setInputFiles([]);
 
   //Normaly some assertion need to be done, but on this website there are no ancors to make any check
   //expect(uploadSingleFileBtn).toHaveText('No File Selected')
-
-  await uploadMultipleFilesBtn.setInputFiles([]);
 
   await page.waitForTimeout(5000)
 
