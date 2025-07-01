@@ -7,3 +7,7 @@ node_modules/
 /playwright/.cache/
 tests/screenshots/
 tests/uploadFiles/
+allure/
+allure-results/
+results.json
+results.xml
