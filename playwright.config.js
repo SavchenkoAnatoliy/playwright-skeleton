@@ -34,7 +34,7 @@ export default defineConfig({
     //screenshot:'on',
     //video: "on"
   },
-  timeout:1000,
+  /*timeout:5000,*/
 
   /* Configure projects for major browsers */
   projects: [
