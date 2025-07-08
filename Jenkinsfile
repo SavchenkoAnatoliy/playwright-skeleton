@@ -1,28 +1,15 @@
 pipeline {
-  agent { 
-    docker { 
-      image 'mcr.microsoft.com/playwright:v1.53.0-noble'
-    } 
-  }
+  agent any
+
   stages {
-    stage('install playwright') {
+    stage('Run Playwright in Docker') {
       steps {
         sh '''
-          npm i -D @playwright/test
-          npx playwright install
-        '''
-      }
-    }
-    stage('help') {
-      steps {
-        sh 'npx playwright test --help'
-      }
-    }
-    stage('test') {
-      steps {
-        sh '''
-          npx playwright test --list
-          npx playwright test UploadFiles.spec.js --project=chromium --headed
+          docker run --rm -v %cd%:/tests -w /tests mcr.microsoft.com/playwright:v1.53.0-noble /bin/bash -c "
+            npm i -D @playwright/test &&
+            npx playwright install &&
+            npx playwright test UploadFiles.spec.js --project=chromium --headed
+          "
         '''
       }
     }
