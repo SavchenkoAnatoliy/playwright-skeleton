@@ -2,15 +2,15 @@ pipeline {
   agent any
 
   stages {
-    stage('Run Playwright in Docker') {
+    stage('Install Dependencies') {
       steps {
-        sh '''
-          docker run --rm -v %cd%:/tests -w /tests mcr.microsoft.com/playwright:v1.53.0-noble /bin/bash -c "
-            npm i -D @playwright/test &&
-            npx playwright install &&
-            npx playwright test UploadFiles.spec.js --project=chromium --headed
-          "
-        '''
+        bat 'npm install -D @playwright/test'
+        bat 'npx playwright install'
+      }
+    }
+    stage('Run Tests') {
+      steps {
+        bat 'npx playwright test UploadFiles.spec.js --project=chromium --headed'
       }
     }
   }
