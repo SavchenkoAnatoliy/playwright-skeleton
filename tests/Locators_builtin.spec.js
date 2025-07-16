@@ -29,8 +29,6 @@ test('Built-inlocators', async ({page})=>{
     await page.getByRole('button', {type: 'submit'}).click();
 
     //page.getByText() to locate by text content.
-    await expect(await page.getByText('FirstName LastName')).toBeVisible();
-
-
-
+    const dashboardText = await page.locator("//h6[normalize-space()='Dashboard']")
+    await expect(dashboardText).toBeVisible();
 })
