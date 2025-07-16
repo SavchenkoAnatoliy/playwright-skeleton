@@ -24,10 +24,10 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  //reporter: 'html',
   //reporter: [['json', { outputFile: 'results.json'}]],
   //reporter: [['allure-playwright',{outputFolder: 'my-allure-results'}]],
-  //reporter: [['junit', { outputFile: 'results.xml'}]],
+  reporter: [['list'], ['junit', { outputFile: 'results/zephyr-results.xml'}]],
   /*reporter: [
     ['html'],
     ['json', { outputFile: 'results.json'}],

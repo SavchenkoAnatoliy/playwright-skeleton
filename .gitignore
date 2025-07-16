@@ -11,3 +11,4 @@ allure/
 allure-results/
 results.json
 results.xml
+results/zephyr-results.xml
