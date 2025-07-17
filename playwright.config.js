@@ -27,7 +27,7 @@ export default defineConfig({
   //reporter: 'html',
   //reporter: [['json', { outputFile: 'results.json'}]],
   //reporter: [['allure-playwright',{outputFolder: 'my-allure-results'}]],
-  reporter: [['list'], ['junit', { outputFile: 'results/zephyr-results.xml'}]],
+  reporter: [['list'], ['junit', { outputFile: 'results/zephyr-results.xml'}], ['allure-playwright']],
   /*reporter: [
     ['html'],
     ['json', { outputFile: 'results.json'}],
