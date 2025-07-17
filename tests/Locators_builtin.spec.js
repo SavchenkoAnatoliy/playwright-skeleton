@@ -33,7 +33,7 @@ test('Built-inlocators', async ({page})=>{
     await expect(dashboardText).toBeVisible();
 })
 
-test('PIM-T3 | Autosyncron with published test case', async ({page})=>{
+test('Autosyncron with not published test case 01', async ({page})=>{
     
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 
@@ -43,6 +43,126 @@ test('PIM-T3 | Autosyncron with published test case', async ({page})=>{
 
     //page.getByPlaceholder() to locate an input by placeholder.
     await page.getByPlaceholder('Username').fill("Admin");
+    await page.getByPlaceholder('Password').fill("admin123");
+
+    //page.getByRole() to locate by explicit and implicit accessibility attributes.
+    await page.getByRole('button', {type: 'submit'}).click();
+
+    //page.getByText() to locate by text content.
+    const dashboardText = await page.locator("//h6[normalize-space()='Dashboard']")
+    await expect(dashboardText).toBeVisible();
+})
+
+test('Autosyncron with not published test case 02', async ({page})=>{
+    
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+
+    //page.getByAltText() to locate an element, usually image, by its text alternative.
+    const logo = await page.getByAltText('company-branding')
+    await expect(logo).toBeVisible();
+
+    //page.getByPlaceholder() to locate an input by placeholder.
+    await page.getByPlaceholder('Username').fill("Admin");
+    await page.getByPlaceholder('Password').fill("admin123");
+
+    //page.getByRole() to locate by explicit and implicit accessibility attributes.
+    await page.getByRole('button', {type: 'submit'}).click();
+
+    //page.getByText() to locate by text content.
+    const dashboardText = await page.locator("//h6[normalize-space()='Dashboard']")
+    await expect(dashboardText).toBeVisible();
+})
+
+test('Autosyncron with not published test case 03', async ({page})=>{
+    
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+
+    //page.getByAltText() to locate an element, usually image, by its text alternative.
+    const logo = await page.getByAltText('company-branding')
+    await expect(logo).toBeVisible();
+
+    //page.getByPlaceholder() to locate an input by placeholder.
+    await page.getByPlaceholder('Username').fill("Admin");
+    await page.getByPlaceholder('Password').fill("admin123");
+
+    //page.getByRole() to locate by explicit and implicit accessibility attributes.
+    await page.getByRole('button', {type: 'submit'}).click();
+
+    //page.getByText() to locate by text content.
+    const dashboardText = await page.locator("//h6[normalize-space()='Dashboard']")
+    await expect(dashboardText).toBeVisible();
+})
+
+test('Autosyncron with not published test case 04', async ({page})=>{
+    
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+
+    //page.getByAltText() to locate an element, usually image, by its text alternative.
+    const logo = await page.getByAltText('company-branding')
+    await expect(logo).toBeVisible();
+
+    //page.getByPlaceholder() to locate an input by placeholder.
+    await page.getByPlaceholder('Username').fill("Admin");
+    await page.getByPlaceholder('Password').fill("admin123");
+
+    //page.getByRole() to locate by explicit and implicit accessibility attributes.
+    await page.getByRole('button', {type: 'submit'}).click();
+
+    //page.getByText() to locate by text content.
+    const dashboardText = await page.locator("//h6[normalize-space()='Dashboard']")
+    await expect(dashboardText).toBeVisible();
+})
+
+test('Autosyncron with not published test case 05', async ({page})=>{
+    
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+
+    //page.getByAltText() to locate an element, usually image, by its text alternative.
+    const logo = await page.getByAltText('company-branding')
+    await expect(logo).toBeVisible();
+
+    //page.getByPlaceholder() to locate an input by placeholder.
+    await page.getByPlaceholder('Username').fill("Admin");
+    await page.getByPlaceholder('Password').fill("admin123");
+
+    //page.getByRole() to locate by explicit and implicit accessibility attributes.
+    await page.getByRole('button', {type: 'submit'}).click();
+
+    //page.getByText() to locate by text content.
+    const dashboardText = await page.locator("//h6[normalize-space()='Dashboard']")
+    await expect(dashboardText).toBeVisible();
+})
+
+test('Autosyncron with not published test case 06', async ({page})=>{
+    
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+
+    //page.getByAltText() to locate an element, usually image, by its text alternative.
+    const logo = await page.getByAltText('company-branding')
+    await expect(logo).toBeVisible();
+
+    //page.getByPlaceholder() to locate an input by placeholder.
+    await page.getByPlaceholder('Username').fill("Admin");
+    /*await page.getByPlaceholder('Password').fill("admin123");*/
+
+    //page.getByRole() to locate by explicit and implicit accessibility attributes.
+    await page.getByRole('button', {type: 'submit'}).click();
+
+    //page.getByText() to locate by text content.
+    const dashboardText = await page.locator("//h6[normalize-space()='Dashboard']")
+    await expect(dashboardText).toBeVisible();
+})
+
+test('Autosyncron with not published test case 07', async ({page})=>{
+    
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+
+    //page.getByAltText() to locate an element, usually image, by its text alternative.
+    const logo = await page.getByAltText('company-branding')
+    await expect(logo).toBeVisible();
+
+    //page.getByPlaceholder() to locate an input by placeholder.
+    /*await page.getByPlaceholder('Username').fill("Admin");*/
     await page.getByPlaceholder('Password').fill("admin123");
 
     //page.getByRole() to locate by explicit and implicit accessibility attributes.
